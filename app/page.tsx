@@ -1,6 +1,7 @@
 import { ArrowRight, Check, Plane, ShieldCheck, Sparkles } from "lucide-react";
 import Link from "next/link";
 import CookieBanner from "./components/CookieBanner";
+import LeadCaptureForm from "./components/LeadCaptureForm";
 
 const rights = [
   {
@@ -196,21 +197,7 @@ export default function Home() {
               <p className="section-subheading">
                 Pop in an email and we’ll auto-send the PDF (plus an editable Notion version) so you can save screenshots, receipts, and timelines in one place.
               </p>
-              <form className="mt-8 flex flex-col gap-3 md:flex-row">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="you@email.com"
-                  className="h-12 flex-1 rounded-2xl border border-slate-200 px-4 text-base focus:border-slate-400 focus:outline-none"
-                  required
-                />
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center rounded-2xl bg-slate-900 px-8 py-3 text-base font-semibold text-white"
-                >
-                  Send it over
-                </button>
-              </form>
+              <LeadCaptureForm />
               <p className="mt-3 text-xs text-slate-500">
                 No spam. One follow-up email with affiliate links so you can pick a partner. Unsubscribe any time.
               </p>

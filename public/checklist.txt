@@ -1,0 +1,22 @@
+
+MyFlightGotDelayed Checklist
+----------------------------
+Passenger(s): ________________________________
+Booking reference: ___________________________
+Airline & flight no: _________________________
+Departure/Arrival airports: __________________
+Scheduled departure: ______  Actual: _________
+Scheduled arrival: ________  Actual: _________
+Minutes delayed: _____________________________
+
+Evidence tracker
+[ ] Boarding pass / e-ticket PDF
+[ ] Screenshot of airline status page
+[ ] Photos of gate screen or announcements
+[ ] Written note of crew explanation
+[ ] Receipts (food/hotel/transport)
+[ ] Communication log with the airline
+
+Notes
+---------------------------------------------
+

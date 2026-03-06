@@ -1,20 +1,27 @@
 "use client";
 
-import { useState } from "react";
+/* eslint-disable react-hooks/set-state-in-effect */
+import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "mfds-cookie-consent";
 
 type ConsentState = "pending" | "accepted" | "declined";
 
 export default function CookieBanner() {
-  const [consent, setConsent] = useState<ConsentState>(() => {
-    if (typeof window === "undefined") return "pending";
-    return (window.localStorage.getItem(STORAGE_KEY) as ConsentState | null) ?? "pending";
-  });
+  const [consent, setConsent] = useState<ConsentState>("pending");
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const saved = window.localStorage.getItem(STORAGE_KEY) as ConsentState | null;
+    if (saved) setConsent(saved);
+  }, []);
 
   const handleChoice = (choice: ConsentState) => {
     setConsent(choice);
-    window.localStorage.setItem(STORAGE_KEY, choice);
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(STORAGE_KEY, choice);
+      window.dispatchEvent(new Event("mfgd-consent-update"));
+    }
   };
 
   if (consent !== "pending") return null;
