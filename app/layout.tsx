@@ -57,6 +57,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <meta name="fo-verify" content="883026fc-0dc8-46f4-b3d5-bac11f83b7ed" />
+      </head>
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} bg-slate-50 text-slate-900 antialiased`}
       >
