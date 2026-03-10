@@ -178,7 +178,7 @@ export default function Home() {
               </div>
               <Link
                 className="inline-flex items-center justify-center rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white"
-                href="https://airhelp.com/"
+                href="https://airhelp.tpo.li/fVUdhi1z"
                 target="_blank"
                 rel="noreferrer"
               >
